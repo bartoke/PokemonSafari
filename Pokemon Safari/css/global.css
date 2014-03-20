@@ -34,13 +34,26 @@ strong {
 	background: #FFFFFF;
 }
 
-.return {
+.header {
 	height: 35px;
 	font-size: 13px;
 	color: #475f77;
 	margin-left: 10px;
 	padding-left: 30px;
 	line-height: 35px;
+}
+
+.header.return { background: no-repeat url(../images/icons/home.png) left 3px; }
+.header.turn { background: no-repeat url(../images/icons/turn.png) left 5px; }
+
+
+.title {
+	height: 35px;
+	line-height: 35px;
+	padding-left: 8px;
+	color: white;
+	text-align: center;
+	font-size: 17px;
 	
-	background: no-repeat url(../images/icons/home.png) left 3px;
+	background: #354b5e;
 }

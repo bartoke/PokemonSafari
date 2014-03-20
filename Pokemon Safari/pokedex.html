@@ -1,30 +1,25 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Pokedex</title>
-    <style>
-      body {
-        min-width: 200px;
-      }
+<head>
+<title>Pokedex</title>
 
-      img {
-        border: 1px solid black;
-        vertical-align: middle;
-        width: 60px;
-        height: 60px;
-      }
+<link rel="stylesheet" type="text/css" href="css/global.css">
+<link rel="stylesheet" type="text/css" href="css/pokedex.css">
 
-    </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
-     -->
-    <script src="js/pokedex.js"></script>
-  </head>
-  <body>
-    <div id='Pokemon'></div>
-  </body>
+<script src="js/pokedex.js"></script>
+</head>
+<body>
+<div class="container">
+	<a href="pokedex.html?filter">
+	<div class="header return">
+		Back to home
+	</div>
+	</a>
+	<div class="title">Pok&#201;dex</div>
+	<div class="subtitle">Total number of <span id="collected_pokemon"></span> Pokemon</div>
+	
+	<table cellpadding="0" cellspacing="0" id="pokedex">
+	</table>
+</div>
+</body>
 </html>

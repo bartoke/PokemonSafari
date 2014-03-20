@@ -1,16 +1,5 @@
 @charset "UTF-8";
 
-.title {
-	height: 35px;
-	line-height: 35px;
-	padding-left: 8px;
-	color: white;
-	text-align: center;
-	font-size: 17px;
-	
-	background: #354b5e;
-}
-
 .button {
 	height: 50px;
 	line-height: 50px;

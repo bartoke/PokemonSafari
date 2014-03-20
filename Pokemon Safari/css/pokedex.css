@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.title {
+	text-transform: uppercase;
+	background: #d74b4b;	
+}
+
+.subtitle {
+	line-height: 20px;
+	background: #DCDDD8;
+	color: #444;
+	font-size: 13px;
+	text-align: center;	
+}
+
+.subtitle span {
+	font-weight: 700;
+}
