@@ -7,7 +7,6 @@ var setup = function(e) {
 		chromeCity.className = "button city";
 		chromeCity.id = "city";
 		chromeCity.innerHTML = "<span>Chrome City</span>";
-	
 		container.appendChild(chromeCity);
 	}
 	
@@ -20,10 +19,19 @@ var setup = function(e) {
 
 var click = function(e) {
 	return function() {
+		if(e.classList.contains("region")){
+			// We should check if the user has an S. S. Ticket, of course
+			document.getElementById("title").innerHTML = "Change the zone";
+			document.getElementById("regions").classList.add("hidden");
+			
+			document.getElementById(e.id + "zones").classList.remove("hidden");
+			return;	
+		}
+		
+		// If the user somehow (inspect element) chooses a Johto zone without an S. S. Ticket:
+		// we should check if the user has one here too.
 		localStorage['location'] = e.id;
 		chrome.browserAction.setIcon({"path":localStorage['location'] + ".png"});
-		
-		document.location = "menu.html";
 	};
 }
 

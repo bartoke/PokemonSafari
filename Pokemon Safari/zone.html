@@ -16,11 +16,21 @@
 			Back to home
 		</div>
 	</a>
-	<div class="title">
-			Change the zone
+	<div class="title" id="title">
+			Choose the region
 	</div>
-	
-	<a href="menu.html" id="buttons">
+	<a href="#" id="regions">
+		<div id="kanto" class="button region forest">
+			<span>Kanto Region</span>
+		</div>
+		<div id="johto" class="button glacier region">
+			<div class="requires" id="ssticket">Requires an <strong>S.S. Ticket</strong></div>
+			<div class="requiresicon ssticket" id="ssticket"></div>
+			<span>Johto Region</span>
+			<div class="filter" id="ssticket"></div>
+		</div>
+	</a>
+	<a href="menu.html" class="hidden" id="kantozones">
 		<div id="forest" class="button forest">
 			<span>Feldgrau Forest</span>
 		</div>
@@ -29,6 +39,17 @@
 		</div>
 		<div id="beach" class="button beach">
 			<span>Burnt-Sienna Beach</span>
+		</div>
+	</a>
+	<a href="menu.html" class="hidden" id="johtozones">
+		<div id="forest" class="button park">
+			<span>Peony Park</span>
+		</div>
+		<div id="tunnel" class="button glacier">
+			<span>Galanthus Glacier</span>
+		</div>
+		<div id="beach" class="button tower">
+			<span>Thistle Tower</span>
 		</div>
 	</a>
 </div>

@@ -8,6 +8,7 @@
 	font-size: 18px;
 	font-weight: 700;
 	opacity: 0.6;
+	position: relative;
 	cursor: pointer;
 	
 	-webkit-transition: opacity 0.2s;
@@ -17,11 +18,72 @@
 .button span {
 	background: rgba(0, 0, 0, 0.6);
 	padding: 0 4px;
+	
+	z-index: 99;
+	position:relative;
 }
+
 
 .button:hover { opacity: 1; }
 
+.region {
+	opacity: 1;
+}
+
+.requiresicon {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-position: center center;
+	background-color: #fff;	
+	background-repeat: no-repeat;
+	z-index: 101;
+	position:absolute;
+	margin: 10px;
+	right: 0;
+}
+
+.button .requires { 
+	position: absolute;
+	left: 0;
+	top: 14px;
+	width: 210px;
+	
+	font-size: 12px;
+	height: 22px;
+	margin: 0;
+	font-weight: 400;
+	color: #d74b4b;
+	background: white;
+	padding-left: 10px;
+	line-height: 22px;
+	z-index: 100;
+	
+	display: none;
+}
+
+.button:hover .requires {
+	display: block;	
+}
+
+.button .filter {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: black;
+	left: 0;
+	z-index: 1;
+	opacity: 0.5;
+	top: 0;
+}
+
+.ssticket { background-image: url(../images/icons/nintendo/ssticket.png); }
 .forest { background-image: url(../images/big_sprites/forest.png); }
 .tunnel { background-image: url(../images/big_sprites/tunnel.png); }
 .beach { background-image: url(../images/big_sprites/beach.png); }
 .city { background-image: url(../images/big_sprites/city.png); }
+.park { background-image: url(../images/big_sprites/park.png); }
+.glacier { background-image: url(../images/big_sprites/glacier.png); }
+.tower { background-image: url(../images/big_sprites/tower.png); }
+
+.hidden { display: none; }
