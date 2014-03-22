@@ -1,9 +1,12 @@
+var urlifyNumber = function(e) {
+  var s = '' + e;
+  while (s.length < 3)
+    s = '0' + s;
+  return 'http://www.serebii.net/xy/pokemon/' + s + '.png';
+};
 
-
-//
-
+var pkdex = JSON.parse(localStorage['pokedex']);
 var setup = function(e) {
-	var pkdex = JSON.parse(localStorage['pokedex']);
 	var hash = window.location.hash.substring(1);
 	
 	document.getElementById("collected_pokemon").innerHTML = Object.keys(pkdex).length;
@@ -24,11 +27,11 @@ var setup = function(e) {
 			picture.style.backgroundImage = "url(http://images.sodahead.com/slideshows/000017353/2813640578_question_mark-72343836337_large.png)";
 		} else {	
 			name.innerHTML = pkdex[i].name;
-			picture.style.backgroundImage = "url(" + pkdex[i].img + ")";
+			picture.style.backgroundImage = "url(" + urlifyNumber(i) + ")";
 		}
-	};
+	}
 };
-
+	
 document.addEventListener('DOMContentLoaded', function () {
 	setup();
 });
